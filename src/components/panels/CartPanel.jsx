@@ -78,7 +78,7 @@ export default function CartPanel() {
         }}
       >
         <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415225/CAT_INTERES_VNTG_u7issh.mp4"
+          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1781151523/VNTG-HUB_ELDELLU_TRAIDOR_c1oyie.mp4"
           style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
           controls
           muted
