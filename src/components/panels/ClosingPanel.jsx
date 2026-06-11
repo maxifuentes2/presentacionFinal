@@ -105,8 +105,8 @@ export default function ClosingPanel() {
           marginBottom: 20,
         }}
       >
-        {['Zufia †', 'Enzo †', 'Ignacio', 'Gaspar', 'Santiago', 'Bruno'].map((name) => (
-          <div key={name} className="chip chip-orange">
+        {['Máximo Fuentes', 'Enzo B. Delluniversidad', 'Ignacio Povolo', 'Gaspar Barroso', 'Santiago Zufia', 'Bruno Guzmán'].map((name) => (
+          <div key={name} className="chip chip-orange" style={{ fontSize: 12, padding: '7px 14px' }}>
             <span className="chip-dot chip-dot-orange" />
             {name}
           </div>
