@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
 
 const features = [
-  { label: 'Vista Grilla',           type: 'orange' },
-  { label: 'Galería Interactiva',    type: 'blue' },
-  { label: 'Hover Swap',             type: 'orange' },
-  { label: 'Zoom Drag',              type: 'blue' },
-  { label: 'Especificaciones',       type: 'orange' },
-  { label: 'Filtros por Categoría',  type: 'blue' },
+  { label: 'Carrito Persistente',    type: 'orange' },
+  { label: 'Wishlist Favoritos',     type: 'blue' },
+  { label: 'Sidebars Deslizables',   type: 'orange' },
+  { label: 'Sincronización Server',  type: 'blue' },
+  { label: 'Barra Envío Gratis',     type: 'orange' },
+  { label: 'Context API Global',     type: 'blue' },
 ]
 
-export default function CatalogPanel() {
+export default function CartPanel() {
   return (
     <GlassPanel>
       <p
@@ -23,7 +23,7 @@ export default function CatalogPanel() {
           marginBottom: 8,
         }}
       >
-        Diapositiva 03 — Catálogo &amp; Navegación
+        Diapositiva 06 — Carrito &amp; Estado Global
       </p>
 
       <h2
@@ -36,13 +36,13 @@ export default function CatalogPanel() {
           letterSpacing: -0.5,
         }}
       >
-        Catálogo y Navegación
+        Flujo de Compras
       </h2>
 
       <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
-        Vista de grilla con cards glassmorphism, galería interactiva con hover swap
-        y zoom drag en la vista detalle. Filtros por categoría, franquicia y rango
-        de precio con ordenamiento dinámico.
+        Carrito persistente con sidebars deslizables, sincronización en tiempo real
+        con el servidor, wishlist de favoritos, barra de progreso interactiva para
+        envío gratis y manejo de estado global con Context API.
       </p>
 
       <div
@@ -77,7 +77,7 @@ export default function CatalogPanel() {
         }}
       >
         <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415243/FILTROS_VNTG_noajcp.mp4"
+          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415225/CAT_INTERES_VNTG_u7issh.mp4"
           style={{ width: '100%', display: 'block', borderRadius: 12 }}
           controls
           muted
@@ -94,12 +94,12 @@ export default function CatalogPanel() {
           marginTop: 16,
           fontSize: 12,
           fontFamily: 'Space Mono, monospace',
-          color: 'rgba(0,86,179,0.4)',
+          color: 'rgba(255,90,0,0.4)',
           letterSpacing: 2,
           fontStyle: 'italic',
         }}
       >
-        "Cada producto cuenta una historia. Nosotros la contamos bien."
+        "El camino del comprador, simplificado."
       </motion.p>
     </GlassPanel>
   )

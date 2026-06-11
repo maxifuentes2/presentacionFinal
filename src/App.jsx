@@ -8,26 +8,26 @@ import NavBar from './components/ui/NavBar'
 import ProgressBar from './components/ui/ProgressBar'
 
 import HeroPanel from './components/panels/HeroPanel'
-import ProblemPanel from './components/panels/ProblemPanel'
-import SolutionPanel from './components/panels/SolutionPanel'
-import AuthPanel from './components/panels/AuthPanel'
+import IntroPanel from './components/panels/IntroPanel'
 import CatalogPanel from './components/panels/CatalogPanel'
-import CryptoPanel from './components/panels/CryptoPanel'
-import StackPanel from './components/panels/StackPanel'
-import DifferentiatorsPanel from './components/panels/DifferentiatorsPanel'
-import VisionPanel from './components/panels/VisionPanel'
+import AuthPanel from './components/panels/AuthPanel'
+import ProfilePanel from './components/panels/ProfilePanel'
+import CartPanel from './components/panels/CartPanel'
+import PaymentsPanel from './components/panels/PaymentsPanel'
+import IAPanel from './components/panels/IAPanel'
+import AdminPanel from './components/panels/AdminPanel'
 import ClosingPanel from './components/panels/ClosingPanel'
 
 const PANELS = {
   1:  HeroPanel,
-  2:  ProblemPanel,
-  3:  SolutionPanel,
+  2:  IntroPanel,
+  3:  CatalogPanel,
   4:  AuthPanel,
-  5:  CatalogPanel,
-  6:  CryptoPanel,
-  7:  StackPanel,
-  8:  DifferentiatorsPanel,
-  9:  VisionPanel,
+  5:  ProfilePanel,
+  6:  CartPanel,
+  7:  PaymentsPanel,
+  8:  IAPanel,
+  9:  AdminPanel,
   10: ClosingPanel,
 }
 

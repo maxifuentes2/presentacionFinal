@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
 
 const features = [
-  { label: 'Vista Grilla',           type: 'orange' },
-  { label: 'Galería Interactiva',    type: 'blue' },
-  { label: 'Hover Swap',             type: 'orange' },
-  { label: 'Zoom Drag',              type: 'blue' },
-  { label: 'Especificaciones',       type: 'orange' },
-  { label: 'Filtros por Categoría',  type: 'blue' },
+  { label: 'Direcciones Envío',   type: 'orange' },
+  { label: 'Gestión Intereses',   type: 'blue' },
+  { label: 'Perfil Personal',     type: 'orange' },
+  { label: 'Historial Pedidos',   type: 'blue' },
+  { label: 'Puntos Acumulados',   type: 'orange' },
+  { label: 'Preferencias UI',     type: 'blue' },
 ]
 
-export default function CatalogPanel() {
+export default function ProfilePanel() {
   return (
     <GlassPanel>
       <p
@@ -23,7 +23,7 @@ export default function CatalogPanel() {
           marginBottom: 8,
         }}
       >
-        Diapositiva 03 — Catálogo &amp; Navegación
+        Diapositiva 05 — Perfil de Usuario
       </p>
 
       <h2
@@ -36,13 +36,13 @@ export default function CatalogPanel() {
           letterSpacing: -0.5,
         }}
       >
-        Catálogo y Navegación
+        Perfil y Preferencias
       </h2>
 
       <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
-        Vista de grilla con cards glassmorphism, galería interactiva con hover swap
-        y zoom drag en la vista detalle. Filtros por categoría, franquicia y rango
-        de precio con ordenamiento dinámico.
+        Gestión completa del perfil con direcciones de envío guardadas, intereses
+        personalizados para recomendaciones, historial de pedidos y selector de
+        preferencias de interfaz.
       </p>
 
       <div
@@ -72,12 +72,12 @@ export default function CatalogPanel() {
           width: '100%',
           maxWidth: 480,
           overflow: 'hidden',
-          border: '1px solid rgba(255,90,0,0.2)',
+          border: '1px solid rgba(0,86,179,0.2)',
           background: 'rgba(0,0,0,0.35)',
         }}
       >
         <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415243/FILTROS_VNTG_noajcp.mp4"
+          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415234/DIRECCIONES_VNTG_mxpl4b.mp4"
           style={{ width: '100%', display: 'block', borderRadius: 12 }}
           controls
           muted
@@ -99,7 +99,7 @@ export default function CatalogPanel() {
           fontStyle: 'italic',
         }}
       >
-        "Cada producto cuenta una historia. Nosotros la contamos bien."
+        "Tu experiencia, tus reglas."
       </motion.p>
     </GlassPanel>
   )

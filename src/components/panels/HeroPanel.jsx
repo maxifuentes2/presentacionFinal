@@ -72,10 +72,10 @@ export default function HeroPanel() {
           color: 'rgba(0,86,179,0.55)',
           fontFamily: 'Space Mono, monospace',
           letterSpacing: 3,
-          marginBottom: 32,
+          marginBottom: 8,
         }}
       >
-        La nueva generación del comercio especializado.
+        Universidad del Aconcagua — Proyecto Integrador
       </motion.p>
 
       <motion.div
@@ -87,12 +87,12 @@ export default function HeroPanel() {
           flexWrap: 'wrap',
           justifyContent: 'center',
           gap: 12,
-          maxWidth: 480,
+          maxWidth: 520,
         }}
       >
         {[
           { label: 'Coleccionables Digitales', type: 'orange' },
-          { label: 'Gaming Marketplace', type: 'orange' },
+          { label: 'Funkos, Anime & Gaming', type: 'orange' },
           { label: 'Crypto Payments', type: 'blue' },
           { label: 'AI Chatbot Llama 3', type: 'blue' },
         ].map(({ label, type }) => (

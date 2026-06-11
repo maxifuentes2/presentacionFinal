@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
 
 const features = [
-  { label: 'Vista Grilla',           type: 'orange' },
-  { label: 'Galería Interactiva',    type: 'blue' },
-  { label: 'Hover Swap',             type: 'orange' },
-  { label: 'Zoom Drag',              type: 'blue' },
-  { label: 'Especificaciones',       type: 'orange' },
-  { label: 'Filtros por Categoría',  type: 'blue' },
+  { label: 'Node.js + Express',     type: 'orange' },
+  { label: 'MySQL Railway',         type: 'blue' },
+  { label: 'Vercel / Render',       type: 'orange' },
+  { label: 'CRUD Admin',            type: 'blue' },
+  { label: 'Gmail API Poller',      type: 'orange' },
+  { label: 'Puntos Fidelidad',      type: 'blue' },
 ]
 
-export default function CatalogPanel() {
+export default function AdminPanel() {
   return (
     <GlassPanel>
       <p
@@ -23,7 +23,7 @@ export default function CatalogPanel() {
           marginBottom: 8,
         }}
       >
-        Diapositiva 03 — Catálogo &amp; Navegación
+        Diapositiva 09 — Backend &amp; Administración
       </p>
 
       <h2
@@ -36,13 +36,14 @@ export default function CatalogPanel() {
           letterSpacing: -0.5,
         }}
       >
-        Catálogo y Navegación
+        Arquitectura y Admin
       </h2>
 
       <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
-        Vista de grilla con cards glassmorphism, galería interactiva con hover swap
-        y zoom drag en la vista detalle. Filtros por categoría, franquicia y rango
-        de precio con ordenamiento dinámico.
+        Backend con Node.js + Express y MySQL en Railway. Frontend en Vercel, API
+        en Render. Panel de administración con CRUD de productos, categorías,
+        envíos y pedidos. Soporte con Gmail API Poller que lee correos entrantes
+        y los vincula a tickets. Sistema de fidelidad con puntos por compra.
       </p>
 
       <div
@@ -63,43 +64,20 @@ export default function CatalogPanel() {
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        style={{
-          borderRadius: 12,
-          width: '100%',
-          maxWidth: 480,
-          overflow: 'hidden',
-          border: '1px solid rgba(255,90,0,0.2)',
-          background: 'rgba(0,0,0,0.35)',
-        }}
-      >
-        <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415243/FILTROS_VNTG_noajcp.mp4"
-          style={{ width: '100%', display: 'block', borderRadius: 12 }}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
-      </motion.div>
-
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
+        transition={{ delay: 0.6 }}
         style={{
           marginTop: 16,
           fontSize: 12,
           fontFamily: 'Space Mono, monospace',
-          color: 'rgba(0,86,179,0.4)',
+          color: 'rgba(255,90,0,0.4)',
           letterSpacing: 2,
           fontStyle: 'italic',
         }}
       >
-        "Cada producto cuenta una historia. Nosotros la contamos bien."
+        "Detrás de cada compra hay una arquitectura sólida."
       </motion.p>
     </GlassPanel>
   )

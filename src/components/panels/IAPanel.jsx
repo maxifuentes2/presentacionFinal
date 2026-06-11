@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
 
 const features = [
-  { label: 'Vista Grilla',           type: 'orange' },
-  { label: 'Galería Interactiva',    type: 'blue' },
-  { label: 'Hover Swap',             type: 'orange' },
-  { label: 'Zoom Drag',              type: 'blue' },
-  { label: 'Especificaciones',       type: 'orange' },
-  { label: 'Filtros por Categoría',  type: 'blue' },
+  { label: 'Chatbot Llama 3',       type: 'orange' },
+  { label: 'Groq API Directa',      type: 'blue' },
+  { label: 'Búsqueda Semántica',    type: 'orange' },
+  { label: 'Gemini IA',             type: 'blue' },
+  { label: 'Cron 60s Stock',        type: 'orange' },
+  { label: 'Cancelación Expiración', type: 'blue' },
 ]
 
-export default function CatalogPanel() {
+export default function IAPanel() {
   return (
     <GlassPanel>
       <p
@@ -23,7 +23,7 @@ export default function CatalogPanel() {
           marginBottom: 8,
         }}
       >
-        Diapositiva 03 — Catálogo &amp; Navegación
+        Diapositiva 08 — Inteligencia Artificial
       </p>
 
       <h2
@@ -36,13 +36,14 @@ export default function CatalogPanel() {
           letterSpacing: -0.5,
         }}
       >
-        Catálogo y Navegación
+        IA y Automatizaciones
       </h2>
 
       <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
-        Vista de grilla con cards glassmorphism, galería interactiva con hover swap
-        y zoom drag en la vista detalle. Filtros por categoría, franquicia y rango
-        de precio con ordenamiento dinámico.
+        Chatbot inteligente con Groq API usando Llama 3 mediante fetch directo,
+        capaz de consultar órdenes por ID o email. Búsqueda semántica en el
+        catálogo con Gemini (Google Generative AI). Tareas programadas que
+        cancelan pedidos expirados cada 60s y restauran stock en MySQL.
       </p>
 
       <div
@@ -72,12 +73,12 @@ export default function CatalogPanel() {
           width: '100%',
           maxWidth: 480,
           overflow: 'hidden',
-          border: '1px solid rgba(255,90,0,0.2)',
+          border: '1px solid rgba(0,86,179,0.2)',
           background: 'rgba(0,0,0,0.35)',
         }}
       >
         <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415243/FILTROS_VNTG_noajcp.mp4"
+          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415226/CHATBOT_VNTG_nfduei.mp4"
           style={{ width: '100%', display: 'block', borderRadius: 12 }}
           controls
           muted
@@ -94,12 +95,12 @@ export default function CatalogPanel() {
           marginTop: 16,
           fontSize: 12,
           fontFamily: 'Space Mono, monospace',
-          color: 'rgba(0,86,179,0.4)',
+          color: 'rgba(255,90,0,0.4)',
           letterSpacing: 2,
           fontStyle: 'italic',
         }}
       >
-        "Cada producto cuenta una historia. Nosotros la contamos bien."
+        "La inteligencia artificial al servicio del coleccionista."
       </motion.p>
     </GlassPanel>
   )

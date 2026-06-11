@@ -36,6 +36,21 @@ export default function ClosingPanel() {
         El futuro del coleccionismo digital ya está aquí.
       </motion.p>
 
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        style={{
+          fontSize: 15,
+          color: 'rgba(161,161,170,0.65)',
+          fontFamily: 'Space Mono, monospace',
+          letterSpacing: 2,
+          marginBottom: 18,
+        }}
+      >
+        Equipo de Desarrollo
+      </motion.p>
+
       <motion.h2
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -77,10 +92,31 @@ export default function ClosingPanel() {
         </p>
       </motion.div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.6 }}
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: 8,
+          maxWidth: 520,
+          marginBottom: 20,
+        }}
+      >
+        {['Zufia †', 'Enzo †', 'Ignacio', 'Gaspar', 'Santiago', 'Bruno'].map((name) => (
+          <div key={name} className="chip chip-orange">
+            <span className="chip-dot chip-dot-orange" />
+            {name}
+          </div>
+        ))}
+      </motion.div>
+
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.6 }}
+        transition={{ delay: 2.0 }}
         style={{
           fontSize: 13,
           color: 'rgba(161,161,170,0.45)',
@@ -88,8 +124,9 @@ export default function ClosingPanel() {
           maxWidth: 560,
         }}
       >
-        VNTG Hub no es solo una tienda. Es una plataforma diseñada para redefinir
-        cómo las comunidades gamer y coleccionistas descubren, interactúan y compran.
+        Gracias por acompañarnos. VNTG Hub no es solo una tienda, es una
+        plataforma diseñada para redefinir cómo las comunidades gamer y
+        coleccionistas descubren, interactúan y compran.
       </motion.p>
     </GlassPanel>
   )

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { usePresentationStore, TOTAL_SLIDES } from '../../store/presentationStore'
 
-const LABELS = ['Portada', 'Problema', 'Solución', 'UX', 'IA', 'Pagos', 'Stack', 'Diff', 'Visión', 'Cierre']
+const LABELS = ['Portada', 'Intro', 'Catálogo', 'Auth', 'Perfil', 'Carrito', 'Pagos', 'IA', 'Admin', 'Cierre']
 
 export default function NavBar() {
   const { currentSlide, goTo } = usePresentationStore()

@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
 
 const features = [
-  { label: 'Vista Grilla',           type: 'orange' },
-  { label: 'Galería Interactiva',    type: 'blue' },
-  { label: 'Hover Swap',             type: 'orange' },
-  { label: 'Zoom Drag',              type: 'blue' },
-  { label: 'Especificaciones',       type: 'orange' },
-  { label: 'Filtros por Categoría',  type: 'blue' },
+  { label: 'Mercado Pago SDK',       type: 'orange' },
+  { label: 'Webhooks Estado',        type: 'blue' },
+  { label: 'Crypto QR Dinámico',     type: 'orange' },
+  { label: 'USDT / BTC / ETH',       type: 'blue' },
+  { label: 'Transferencia Multer',   type: 'orange' },
+  { label: 'Selector USD / ARS',     type: 'blue' },
 ]
 
-export default function CatalogPanel() {
+export default function PaymentsPanel() {
   return (
     <GlassPanel>
       <p
@@ -23,7 +23,7 @@ export default function CatalogPanel() {
           marginBottom: 8,
         }}
       >
-        Diapositiva 03 — Catálogo &amp; Navegación
+        Diapositiva 07 — Pasarelas de Pago
       </p>
 
       <h2
@@ -36,13 +36,14 @@ export default function CatalogPanel() {
           letterSpacing: -0.5,
         }}
       >
-        Catálogo y Navegación
+        Pagos y Finanzas
       </h2>
 
       <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
-        Vista de grilla con cards glassmorphism, galería interactiva con hover swap
-        y zoom drag en la vista detalle. Filtros por categoría, franquicia y rango
-        de precio con ordenamiento dinámico.
+        Integración con Mercado Pago SDK y webhooks para actualización de estados.
+        Pagos con criptomonedas (USDT, BTC, ETH) mediante QR dinámico, montos
+        mínimos y precios en tiempo real. Subida de comprobantes con Multer y
+        selector multi-moneda USD/ARS con tasa actualizada cada 60s.
       </p>
 
       <div
@@ -77,7 +78,7 @@ export default function CatalogPanel() {
         }}
       >
         <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415243/FILTROS_VNTG_noajcp.mp4"
+          src="https://res.cloudinary.com/dfqedjx2l/video/upload/v1781123432/VNTG-HUB_PAGOS_vrbpe9.mp4"
           style={{ width: '100%', display: 'block', borderRadius: 12 }}
           controls
           muted
@@ -99,7 +100,7 @@ export default function CatalogPanel() {
           fontStyle: 'italic',
         }}
       >
-        "Cada producto cuenta una historia. Nosotros la contamos bien."
+        "Pagar debería ser tan fácil como comprar."
       </motion.p>
     </GlassPanel>
   )
