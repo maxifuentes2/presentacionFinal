@@ -74,23 +74,18 @@ export default function AdminPanel() {
           maxWidth: 480,
           aspectRatio: '16 / 9',
           overflow: 'hidden',
-          border: '2px dashed rgba(0,86,179,0.25)',
-          background: 'rgba(0,0,0,0.3)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          gap: 8,
-          color: 'rgba(0,86,179,0.45)',
+          border: '1px solid rgba(255,90,0,0.2)',
+          background: 'rgba(0,0,0,0.35)',
         }}
       >
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <polygon points="10,8 16,12 10,16" />
-        </svg>
-        <span style={{ fontFamily: 'Space Mono, monospace', fontSize: 10, letterSpacing: 3, textTransform: 'uppercase' }}>
-          Video 16:9 — Admin / Soporte Demo
-        </span>
+        <video
+          src="https://res.cloudinary.com/dybr8xxre/video/upload/v1781153558/VNTG-HUB_AMIGO_IMAK_oqtdqc.mp4"
+          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
+          controls
+          muted
+          playsInline
+          preload="metadata"
+        />
       </motion.div>
 
       <motion.p
