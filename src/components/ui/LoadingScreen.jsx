@@ -79,7 +79,7 @@ export default function LoadingScreen() {
               textTransform: 'uppercase',
             }}
           >
-            Iniciando presentación 3D
+            Cargando presentación
           </div>
         </motion.div>
       )}

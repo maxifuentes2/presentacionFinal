@@ -71,6 +71,7 @@ export default function CartPanel() {
           borderRadius: 12,
           width: '100%',
           maxWidth: 480,
+          aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(255,90,0,0.2)',
           background: 'rgba(0,0,0,0.35)',
@@ -78,7 +79,7 @@ export default function CartPanel() {
       >
         <video
           src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415225/CAT_INTERES_VNTG_u7issh.mp4"
-          style={{ width: '100%', display: 'block', borderRadius: 12 }}
+          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
           controls
           muted
           playsInline

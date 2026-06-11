@@ -72,6 +72,7 @@ export default function PaymentsPanel() {
           borderRadius: 12,
           width: '100%',
           maxWidth: 480,
+          aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(255,90,0,0.2)',
           background: 'rgba(0,0,0,0.35)',
@@ -79,7 +80,7 @@ export default function PaymentsPanel() {
       >
         <video
           src="https://res.cloudinary.com/dfqedjx2l/video/upload/v1781123432/VNTG-HUB_PAGOS_vrbpe9.mp4"
-          style={{ width: '100%', display: 'block', borderRadius: 12 }}
+          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
           controls
           muted
           playsInline

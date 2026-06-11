@@ -63,6 +63,35 @@ export default function IntroPanel() {
         ))}
       </div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        style={{
+          borderRadius: 12,
+          width: '100%',
+          maxWidth: 480,
+          aspectRatio: '16 / 9',
+          overflow: 'hidden',
+          border: '2px dashed rgba(255,90,0,0.25)',
+          background: 'rgba(0,0,0,0.3)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          gap: 8,
+          color: 'rgba(255,90,0,0.4)',
+        }}
+      >
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <polygon points="10,8 16,12 10,16" />
+        </svg>
+        <span style={{ fontFamily: 'Space Mono, monospace', fontSize: 10, letterSpacing: 3, textTransform: 'uppercase' }}>
+          Video 16:9 — UI/UX Demo
+        </span>
+      </motion.div>
+
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
