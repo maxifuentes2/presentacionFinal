@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
+import VideoPlayer from '../shared/VideoPlayer'
 
 const features = [
   { label: 'Node.js + Express',     type: 'orange' },
@@ -78,14 +79,7 @@ export default function AdminPanel() {
           background: 'rgba(0,0,0,0.35)',
         }}
       >
-        <video
-          src="https://res.cloudinary.com/dybr8xxre/video/upload/v1781153558/VNTG-HUB_AMIGO_IMAK_oqtdqc.mp4"
-          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
+        <VideoPlayer src="https://res.cloudinary.com/dybr8xxre/video/upload/v1781153558/VNTG-HUB_AMIGO_IMAK_oqtdqc.mp4" />
       </motion.div>
 
       <motion.p

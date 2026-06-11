@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
+import VideoPlayer from '../shared/VideoPlayer'
 
 const features = [
   { label: 'Direcciones Envío',   type: 'orange' },
@@ -77,14 +78,7 @@ export default function ProfilePanel() {
           background: 'rgba(0,0,0,0.35)',
         }}
       >
-        <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415234/DIRECCIONES_VNTG_mxpl4b.mp4"
-          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
+        <VideoPlayer src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415234/DIRECCIONES_VNTG_mxpl4b.mp4" />
       </motion.div>
 
       <motion.p

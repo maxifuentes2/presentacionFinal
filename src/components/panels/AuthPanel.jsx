@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
+import VideoPlayer from '../shared/VideoPlayer'
 
 const features = [
   { label: 'JWT + Bcryptjs',     type: 'orange' },
@@ -77,14 +78,7 @@ export default function AuthPanel() {
           background: 'rgba(0,0,0,0.35)',
         }}
       >
-        <video
-          src="https://res.cloudinary.com/dfqedjx2l/video/upload/v1781123419/VNTG-HUB_INICIAR_SESION_giz51w.mp4"
-          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
+        <VideoPlayer src="https://res.cloudinary.com/dfqedjx2l/video/upload/v1781123419/VNTG-HUB_INICIAR_SESION_giz51w.mp4" />
       </motion.div>
 
       <motion.p

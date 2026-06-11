@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
+import VideoPlayer from '../shared/VideoPlayer'
 
 const features = [
   { label: 'Chatbot Llama 3',       type: 'orange' },
@@ -78,14 +79,7 @@ export default function IAPanel() {
           background: 'rgba(0,0,0,0.35)',
         }}
       >
-        <video
-          src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415226/CHATBOT_VNTG_nfduei.mp4"
-          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
+        <VideoPlayer src="https://res.cloudinary.com/dhg3jbifk/video/upload/v1780415226/CHATBOT_VNTG_nfduei.mp4" />
       </motion.div>
 
       <motion.p

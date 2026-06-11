@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export const TOTAL_SLIDES = 10
+export const TOTAL_SLIDES = 11
 
 // Posición y target de cámara para cada slide
 export const CAMERA_CONFIG = [
@@ -14,6 +14,7 @@ export const CAMERA_CONFIG = [
   { position: [4,   1,   8], target: [1,  0,  0] },  // 8  IA
   { position: [-5, -1,   9], target: [-2, 0,  0] },  // 9  Admin
   { position: [0,   0,  12], target: [0,  0,  0] },  // 10 Cierre
+  { position: [0,   0,  12], target: [0,  0,  0] },  // 11 Troll
 ]
 
 export const usePresentationStore = create((set) => ({

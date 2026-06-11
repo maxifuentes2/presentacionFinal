@@ -17,6 +17,7 @@ import PaymentsPanel from './components/panels/PaymentsPanel'
 import IAPanel from './components/panels/IAPanel'
 import AdminPanel from './components/panels/AdminPanel'
 import ClosingPanel from './components/panels/ClosingPanel'
+import TrollPanel from './components/panels/TrollPanel'
 
 const PANELS = {
   1:  HeroPanel,
@@ -29,6 +30,7 @@ const PANELS = {
   8:  IAPanel,
   9:  AdminPanel,
   10: ClosingPanel,
+  11: TrollPanel,
 }
 
 export default function App() {
