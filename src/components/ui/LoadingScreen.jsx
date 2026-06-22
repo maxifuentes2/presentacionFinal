@@ -2,17 +2,29 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePresentationStore } from '../../store/presentationStore'
 
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
 export default function LoadingScreen() {
   const setLoadingDone = usePresentationStore((s) => s.setLoadingDone)
   const [visible, setVisible] = useState(true)
+  const [started, setStarted] = useState(false)
 
   useEffect(() => {
+    if (isIOS) return
     const t = setTimeout(() => {
       setVisible(false)
       setTimeout(setLoadingDone, 600)
     }, 2000)
     return () => clearTimeout(t)
   }, [setLoadingDone])
+
+  const handleStart = () => {
+    if (started) return
+    setStarted(true)
+    setVisible(false)
+    setTimeout(setLoadingDone, 600)
+  }
 
   return (
     <AnimatePresence>
@@ -21,6 +33,7 @@ export default function LoadingScreen() {
           key="loader"
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
+          onClick={isIOS ? handleStart : undefined}
           style={{
             position: 'fixed',
             inset: 0,
@@ -31,6 +44,7 @@ export default function LoadingScreen() {
             alignItems: 'center',
             justifyContent: 'center',
             gap: 20,
+            cursor: isIOS ? 'pointer' : 'default',
           }}
         >
           {/* Logo */}
@@ -53,7 +67,7 @@ export default function LoadingScreen() {
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
-              transition={{ duration: 1.6, ease: 'easeInOut' }}
+              transition={{ duration: isIOS ? 0 : 1.6, ease: 'easeInOut' }}
               style={{
                 height: '100%',
                 background: 'linear-gradient(90deg, #ff5a00, #0056b3)',
@@ -61,19 +75,35 @@ export default function LoadingScreen() {
             />
           </div>
 
-          <div
-            style={{
-              fontFamily: "'Barlow', sans-serif",
-              fontSize: 11,
-              fontWeight: 700,
-              fontStyle: 'italic',
-              letterSpacing: 4,
-              color: 'rgba(255,90,0,0.6)',
-              textTransform: 'uppercase',
-            }}
-          >
-            Cargando presentación
-          </div>
+          {isIOS ? (
+            <div
+              style={{
+                fontFamily: "'Barlow', sans-serif",
+                fontSize: 11,
+                fontWeight: 700,
+                fontStyle: 'italic',
+                letterSpacing: 4,
+                color: 'rgba(255,90,0,0.6)',
+                textTransform: 'uppercase',
+              }}
+            >
+              Tocá para comenzar
+            </div>
+          ) : (
+            <div
+              style={{
+                fontFamily: "'Barlow', sans-serif",
+                fontSize: 11,
+                fontWeight: 700,
+                fontStyle: 'italic',
+                letterSpacing: 4,
+                color: 'rgba(255,90,0,0.6)',
+                textTransform: 'uppercase',
+              }}
+            >
+              Cargando presentación
+            </div>
+          )}
         </motion.div>
       )}
     </AnimatePresence>

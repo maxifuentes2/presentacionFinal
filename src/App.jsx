@@ -11,6 +11,7 @@ import ProgressBar from './components/ui/ProgressBar'
 import ControlsPanel from './components/ui/ControlsPanel'
 import SlideAudio from './components/shared/SlideAudio'
 import PreloadVideos from './components/shared/PreloadVideos'
+import RotateDevice from './components/ui/RotateDevice'
 
 import HeroPanel from './components/panels/HeroPanel'
 import IntroPanel from './components/panels/IntroPanel'
@@ -55,7 +56,7 @@ export default function App() {
   const ActivePanel = PANELS[currentSlide]
 
   return (
-    <>
+    <RotateDevice>
       <LoadingScreen />
       <CanvasContainer />
 
@@ -85,6 +86,6 @@ export default function App() {
       <ControlsPanel />
       <SlideAudio />
       <PreloadVideos />
-    </>
+    </RotateDevice>
   )
 }

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import AutoFit from './AutoFit'
 
 const variants = {
   hidden: (dir = 1) => ({
@@ -28,18 +29,12 @@ const variants = {
 
 export default function GlassPanel({ children }) {
   return (
-    <div
+    <AutoFit
       style={{
-        width: '100%',
-        height: '100%',
         zIndex: 10,
         pointerEvents: 'all',
         textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 'clamp(40px, 6vw, 80px)',
+        padding: 'clamp(16px, 4vw, 60px)',
       }}
     >
       <motion.div
@@ -54,11 +49,11 @@ export default function GlassPanel({ children }) {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 'clamp(8px, 1.5vh, 20px)',
+          gap: 'clamp(4px, 1.2vh, 16px)',
         }}
       >
         {children}
       </motion.div>
-    </div>
+    </AutoFit>
   )
 }

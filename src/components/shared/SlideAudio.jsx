@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { usePresentationStore, SLIDE_AUDIO } from '../../store/presentationStore'
 
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
 export default function SlideAudio() {
   const currentSlide = usePresentationStore((s) => s.currentSlide)
   const volume = usePresentationStore((s) => s.volume)
@@ -65,9 +68,13 @@ export default function SlideAudio() {
     audio.addEventListener('ended', onEnded)
 
     if (!audioPaused) {
-      playTimer.current = setTimeout(() => {
+      if (isIOS) {
         audio.play().catch(() => {})
-      }, 1500)
+      } else {
+        playTimer.current = setTimeout(() => {
+          audio.play().catch(() => {})
+        }, 1500)
+      }
     }
 
     return () => {

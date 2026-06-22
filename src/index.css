@@ -148,6 +148,12 @@ body {
   animation: glitch-subtle 8s infinite;
 }
 
+/* ── Media queries ── */
+@media (max-width: 480px) {
+  .chip { padding: 5px 10px; font-size: 9px !important; gap: 5px; }
+  .chip-dot { width: 4px; height: 4px; }
+}
+
 /* ── Loading screen ── */
 @keyframes loadBar {
   from { width: 0; }
