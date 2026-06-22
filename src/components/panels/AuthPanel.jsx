@@ -16,22 +16,26 @@ export default function AuthPanel() {
     <GlassPanel>
       <p
         style={{
-          fontFamily: 'Space Mono, monospace',
-          fontSize: 11,
-          letterSpacing: 5,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          fontSize: 16,
+          letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
           marginBottom: 8,
         }}
       >
-        Diapositiva 04 — Autenticación &amp; Seguridad
+        06 — Autenticación &amp; Seguridad
       </p>
 
       <h2
         style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontSize: 'clamp(26px, 4vw, 42px)',
-          fontWeight: 700,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 900,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
+          fontSize: 'clamp(42px, 6vw, 72px)',
           color: '#f4f4f5',
           marginBottom: 6,
           letterSpacing: -0.5,
@@ -40,7 +44,7 @@ export default function AuthPanel() {
         Autenticación y Seguridad
       </h2>
 
-      <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
         Registro y login con JWT y Bcryptjs para hash de contraseñas. Autenticación
         en dos pasos vía email + código, Google OAuth con flujo de redirección
         mediante id_token, y recuperación de cuentas por correo.
@@ -51,8 +55,8 @@ export default function AuthPanel() {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          gap: 10,
-          maxWidth: 520,
+          gap: 16,
+          maxWidth: 960,
           marginBottom: 22,
         }}
       >
@@ -71,7 +75,7 @@ export default function AuthPanel() {
         style={{
           borderRadius: 12,
           width: '100%',
-          maxWidth: 480,
+          maxWidth: 720,
           aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(255,90,0,0.2)',
@@ -86,12 +90,14 @@ export default function AuthPanel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         style={{
-          marginTop: 16,
-          fontSize: 12,
-          fontFamily: 'Space Mono, monospace',
+          marginTop: 32,
+          fontSize: 16,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.4)',
           letterSpacing: 2,
-          fontStyle: 'italic',
         }}
       >
         "La seguridad no es una opción, es la base."

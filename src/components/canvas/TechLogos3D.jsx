@@ -54,7 +54,7 @@ function TechBadge({ label, color, position, phaseOffset = 0 }) {
         color={color}
         anchorX="center"
         anchorY="middle"
-        font="https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRaPpZYFKQHwyVd3U.woff2"
+        font="https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2"
       >
         {label}
       </Text>

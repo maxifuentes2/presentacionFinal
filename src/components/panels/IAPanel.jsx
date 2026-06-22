@@ -16,22 +16,26 @@ export default function IAPanel() {
     <GlassPanel>
       <p
         style={{
-          fontFamily: 'Space Mono, monospace',
-          fontSize: 11,
-          letterSpacing: 5,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          fontSize: 16,
+          letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
           marginBottom: 8,
         }}
       >
-        Diapositiva 08 — Inteligencia Artificial
+        10 — Inteligencia Artificial
       </p>
 
       <h2
         style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontSize: 'clamp(26px, 4vw, 42px)',
-          fontWeight: 700,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 900,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
+          fontSize: 'clamp(42px, 6vw, 72px)',
           color: '#f4f4f5',
           marginBottom: 6,
           letterSpacing: -0.5,
@@ -40,7 +44,7 @@ export default function IAPanel() {
         IA y Automatizaciones
       </h2>
 
-      <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
         Chatbot inteligente con Groq API usando Llama 3 mediante fetch directo,
         capaz de consultar órdenes por ID o email. Búsqueda semántica en el
         catálogo con Gemini (Google Generative AI). Tareas programadas que
@@ -52,8 +56,8 @@ export default function IAPanel() {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          gap: 10,
-          maxWidth: 520,
+          gap: 16,
+          maxWidth: 960,
           marginBottom: 22,
         }}
       >
@@ -72,7 +76,7 @@ export default function IAPanel() {
         style={{
           borderRadius: 12,
           width: '100%',
-          maxWidth: 480,
+          maxWidth: 720,
           aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(0,86,179,0.2)',
@@ -87,12 +91,14 @@ export default function IAPanel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         style={{
-          marginTop: 16,
-          fontSize: 12,
-          fontFamily: 'Space Mono, monospace',
+          marginTop: 32,
+          fontSize: 16,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.4)',
           letterSpacing: 2,
-          fontStyle: 'italic',
         }}
       >
         "La inteligencia artificial al servicio del coleccionista."

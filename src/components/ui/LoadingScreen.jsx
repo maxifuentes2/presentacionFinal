@@ -34,20 +34,11 @@ export default function LoadingScreen() {
           }}
         >
           {/* Logo */}
-          <div
-            style={{
-              fontFamily: 'Space Grotesk, sans-serif',
-              fontSize: 52,
-              fontWeight: 900,
-              letterSpacing: -1,
-              background: 'linear-gradient(130deg, #ff5a00, #0056b3)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            VNTG Hub
-          </div>
+          <img
+            src="/logo-texto-transparente.webp"
+            alt="VNTG Hub"
+            style={{ height: 56 }}
+          />
 
           {/* Barra de carga */}
           <div
@@ -72,8 +63,10 @@ export default function LoadingScreen() {
 
           <div
             style={{
-              fontFamily: 'Space Mono, monospace',
+              fontFamily: "'Barlow', sans-serif",
               fontSize: 11,
+              fontWeight: 700,
+              fontStyle: 'italic',
               letterSpacing: 4,
               color: 'rgba(255,90,0,0.6)',
               textTransform: 'uppercase',

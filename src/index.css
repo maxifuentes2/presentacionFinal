@@ -5,10 +5,9 @@
   --brand-blue: #0056b3;
   --hero-blue: #003e9b;
   --dark-base: #171717;
-  --dark-surface: rgba(30, 30, 30, 0.85);
-  --dark-border: rgba(255, 90, 0, 0.15);
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --dark-surface: #1c1c1c;
+  --dark-border: rgba(255, 90, 0, 0.2);
+  --font-display: 'Barlow', sans-serif;
 }
 
 *, *::before, *::after {
@@ -17,11 +16,23 @@
   padding: 0;
 }
 
-html, body, #root {
+html {
   width: 100%;
   height: 100%;
   overflow: hidden;
   background: var(--dark-base);
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-display);
+  color: #f4f4f5;
+  background: linear-gradient(rgba(23,23,23,0.96), rgba(23,23,23,0.96)), url('/wallpaper.webp') center / cover no-repeat fixed;
+}
+#root {
+  width: 100%;
+  height: 100%;
   font-family: var(--font-display);
   color: #f4f4f5;
 }
@@ -57,15 +68,16 @@ html, body, #root {
 
 /* ── Glass panel ── */
 .glass {
-  background: var(--dark-surface);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background:
+    linear-gradient(145deg, rgba(35,35,35,0.95) 0%, rgba(25,25,25,0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--dark-border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow:
-    0 0 60px rgba(255,90,0,0.06),
-    0 0 120px rgba(0,86,179,0.04),
-    inset 0 1px 0 rgba(255,255,255,0.05);
+    0 0 80px rgba(255,90,0,0.08),
+    0 0 160px rgba(0,86,179,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 /* ── Brand glow ── */
@@ -80,8 +92,12 @@ html, body, #root {
   padding: 8px 14px;
   border-radius: 10px;
   font-size: 13px;
-  font-family: var(--font-mono);
-  letter-spacing: 0.3px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 11px;
 }
 .chip-orange {
   background: rgba(255,90,0,0.07);
@@ -101,6 +117,36 @@ html, body, #root {
 }
 .chip-dot-orange { background: var(--brand-orange); box-shadow: 0 0 8px var(--brand-orange); }
 .chip-dot-blue { background: var(--brand-blue); box-shadow: 0 0 8px var(--brand-blue); }
+
+/* ── Staggered panel children ── */
+@keyframes panelChildIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.panel-container > * {
+  animation: panelChildIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.panel-container > *:nth-child(1)  { animation-delay: 0.05s; }
+.panel-container > *:nth-child(2)  { animation-delay: 0.10s; }
+.panel-container > *:nth-child(3)  { animation-delay: 0.15s; }
+.panel-container > *:nth-child(4)  { animation-delay: 0.20s; }
+.panel-container > *:nth-child(5)  { animation-delay: 0.25s; }
+.panel-container > *:nth-child(6)  { animation-delay: 0.30s; }
+.panel-container > *:nth-child(7)  { animation-delay: 0.35s; }
+.panel-container > *:nth-child(8)  { animation-delay: 0.40s; }
+.panel-container > *:nth-child(9)  { animation-delay: 0.45s; }
+.panel-container > *:nth-child(10) { animation-delay: 0.50s; }
+
+/* ── Glitch animation ── */
+@keyframes glitch-subtle {
+  0%, 90%, 100% { transform: translate(0); opacity: 1; }
+  91% { transform: translate(-2px, 1px) skewX(1deg); opacity: 0.8; }
+  92% { transform: translate(2px, -1px) skewX(-1deg); opacity: 0.9; }
+  95% { transform: translate(0); opacity: 1; }
+}
+.subtle-glitch {
+  animation: glitch-subtle 8s infinite;
+}
 
 /* ── Loading screen ── */
 @keyframes loadBar {

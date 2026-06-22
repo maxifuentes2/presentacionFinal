@@ -16,22 +16,26 @@ export default function AdminPanel() {
     <GlassPanel>
       <p
         style={{
-          fontFamily: 'Space Mono, monospace',
-          fontSize: 11,
-          letterSpacing: 5,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          fontSize: 16,
+          letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
           marginBottom: 8,
         }}
       >
-        Diapositiva 09 — Backend &amp; Administración
+        11 — Backend &amp; Administración
       </p>
 
       <h2
         style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontSize: 'clamp(26px, 4vw, 42px)',
-          fontWeight: 700,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 900,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
+          fontSize: 'clamp(42px, 6vw, 72px)',
           color: '#f4f4f5',
           marginBottom: 6,
           letterSpacing: -0.5,
@@ -40,7 +44,7 @@ export default function AdminPanel() {
         Arquitectura y Admin
       </h2>
 
-      <p style={{ fontSize: 15, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
         Backend con Node.js + Express y MySQL en Railway. Frontend en Vercel, API
         en Render. Panel de administración con CRUD de productos, categorías,
         envíos y pedidos. Soporte con Gmail API Poller que lee correos entrantes
@@ -52,8 +56,8 @@ export default function AdminPanel() {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          gap: 10,
-          maxWidth: 520,
+          gap: 16,
+          maxWidth: 960,
           marginBottom: 22,
         }}
       >
@@ -72,7 +76,7 @@ export default function AdminPanel() {
         style={{
           borderRadius: 12,
           width: '100%',
-          maxWidth: 480,
+          maxWidth: 720,
           aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(255,90,0,0.2)',
@@ -87,12 +91,14 @@ export default function AdminPanel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         style={{
-          marginTop: 16,
-          fontSize: 12,
-          fontFamily: 'Space Mono, monospace',
+          marginTop: 32,
+          fontSize: 16,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.4)',
           letterSpacing: 2,
-          fontStyle: 'italic',
         }}
       >
         "Detrás de cada compra hay una arquitectura sólida."

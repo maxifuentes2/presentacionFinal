@@ -1,8 +1,7 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Stars, PerspectiveCamera, Preload } from '@react-three/drei'
+import { PerspectiveCamera, Preload } from '@react-three/drei'
 import { usePresentationStore } from '../../store/presentationStore'
-import ParticleField from './ParticleField'
 import TechLogos3D from './TechLogos3D'
 import SceneCamera from './SceneCamera'
 
@@ -33,20 +32,9 @@ function SceneContent() {
       <SceneCamera />
       <SceneLights />
 
-      <Stars
-        radius={90}
-        depth={60}
-        count={3500}
-        factor={3}
-        saturation={0}
-        fade
-        speed={0.5}
-      />
-
-      <ParticleField count={220} />
-
-
-      {currentSlide === 7 && <TechLogos3D />}
+      <Suspense fallback={null}>
+        {currentSlide === 7 && <TechLogos3D />}
+      </Suspense>
 
       <fog attach="fog" args={['#171717', 25, 70]} />
     </>
@@ -59,10 +47,13 @@ export default function CanvasContainer() {
       style={{ position: 'fixed', inset: 0, zIndex: 0 }}
       gl={{
         antialias: true,
-        alpha: false,
+        alpha: true,
         powerPreference: 'high-performance',
-        toneMapping: 3, // ACESFilmicToneMapping
+        toneMapping: 3,
         toneMappingExposure: 1.2,
+      }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0)
       }}
       shadows
       dpr={[1, 2]}

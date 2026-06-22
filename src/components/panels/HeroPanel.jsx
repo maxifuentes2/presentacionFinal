@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion'
 import GlassPanel from '../shared/GlassPanel'
 import TypewriterText from '../shared/TypewriterText'
-import { usePresentationStore } from '../../store/presentationStore'
+import ScrambleText from '../shared/ScrambleText'
 
 export default function HeroPanel() {
-  const { loadingDone } = usePresentationStore()
-
   return (
     <GlassPanel>
       <motion.p
@@ -13,35 +11,53 @@ export default function HeroPanel() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         style={{
-          fontFamily: 'Space Mono, monospace',
-          fontSize: 11,
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 900,
+          fontStyle: 'italic',
+          fontSize: 14,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.5)',
           marginBottom: 16,
         }}
       >
-        Presentación Ejecutiva
+        01 — Presentación Ejecutiva
       </motion.p>
 
       <h1
-        className="gradient-text"
+        className="subtle-glitch"
         style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontSize: 'clamp(56px, 10vw, 104px)',
+          fontFamily: "'Barlow', sans-serif",
           fontWeight: 900,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
+          fontSize: 'clamp(3.2rem, 14vw, 10rem)',
           letterSpacing: -3,
           lineHeight: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 'clamp(4px, 2vw, 16px)',
           marginBottom: 16,
-          minHeight: '1.1em',
+          color: '#fff',
         }}
       >
-        <TypewriterText
-          text="VNTG Hub"
-          speed={90}
-          active={loadingDone}
-          delay={200}
-        />
+        <span
+          style={{
+            color: '#003e9b',
+            textShadow: '0 0 20px rgba(0,62,155,0.35), 0 0 50px rgba(0,62,155,0.12)',
+          }}
+        >
+          <ScrambleText text="VNTG" delay={200} />
+        </span>
+        <span
+          style={{
+            color: '#ff5a00',
+            textShadow: '0 0 20px rgba(255,90,0,0.35), 0 0 50px rgba(255,90,0,0.12)',
+          }}
+        >
+          <ScrambleText text="HUB" delay={600} />
+        </span>
       </h1>
 
       <motion.p
@@ -49,16 +65,19 @@ export default function HeroPanel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4 }}
         style={{
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 900,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
           fontSize: 'clamp(16px, 2vw, 22px)',
           color: 'rgba(161,161,170,0.7)',
           marginBottom: 8,
-          fontWeight: 500,
         }}
       >
         <TypewriterText
           text="E-commerce de Coleccionables y Gaming"
           speed={35}
-          active={loadingDone}
+          active={true}
           delay={1100}
         />
       </motion.p>
@@ -70,7 +89,10 @@ export default function HeroPanel() {
         style={{
           fontSize: 13,
           color: 'rgba(0,86,179,0.55)',
-          fontFamily: 'Space Mono, monospace',
+          fontFamily: "'Barlow', sans-serif",
+          fontWeight: 700,
+          fontStyle: 'italic',
+          textTransform: 'uppercase',
           letterSpacing: 3,
           marginBottom: 8,
         }}
@@ -87,7 +109,7 @@ export default function HeroPanel() {
           flexWrap: 'wrap',
           justifyContent: 'center',
           gap: 12,
-          maxWidth: 520,
+          maxWidth: 800,
         }}
       >
         {[

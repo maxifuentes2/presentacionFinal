@@ -1,41 +1,64 @@
 import { motion } from 'framer-motion'
 
 const variants = {
-  hidden: { opacity: 0, y: 24, scale: 0.97 },
+  hidden: (dir = 1) => ({
+    opacity: 0,
+    scale: 0.88,
+    filter: 'blur(6px)',
+    rotateX: dir * 12,
+    y: dir * 50,
+  }),
   visible: {
     opacity: 1,
-    y: 0,
     scale: 1,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    filter: 'blur(0px)',
+    rotateX: 0,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
   },
-  exit: {
+  exit: (dir = 1) => ({
     opacity: 0,
-    y: -20,
-    scale: 0.97,
-    transition: { duration: 0.35, ease: 'easeIn' },
-  },
+    scale: 0.92,
+    filter: 'blur(3px)',
+    rotateX: -dir * 8,
+    y: -dir * 30,
+    transition: { duration: 0.3, ease: 'easeIn' },
+  }),
 }
 
-export default function GlassPanel({ children, className = '' }) {
+export default function GlassPanel({ children }) {
   return (
-    <motion.div
-      className={`glass ${className}`}
-      variants={variants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+    <div
       style={{
-        width: 'min(800px, 93vw)',
-        padding: 'clamp(24px, 4vw, 44px)',
+        width: '100%',
+        height: '100%',
         zIndex: 10,
         pointerEvents: 'all',
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
+        padding: 'clamp(40px, 6vw, 80px)',
       }}
     >
-      {children}
-    </motion.div>
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="panel-container"
+        style={{
+          width: '100%',
+          maxWidth: 1200,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 'clamp(8px, 1.5vh, 20px)',
+        }}
+      >
+        {children}
+      </motion.div>
+    </div>
   )
 }
