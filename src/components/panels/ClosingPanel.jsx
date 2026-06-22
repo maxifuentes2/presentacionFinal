@@ -76,7 +76,10 @@ export default function ClosingPanel() {
         VNTG Hub
       </motion.h2>
 
-      <motion.div
+      <motion.a
+        href="https://vntg-hub.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2 }}
@@ -90,6 +93,18 @@ export default function ClosingPanel() {
           maxWidth: 720,
           width: '100%',
           marginBottom: 20,
+          textDecoration: 'none',
+          display: 'block',
+          cursor: 'pointer',
+          transition: 'all 0.3s',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.borderColor = 'rgba(255,90,0,0.6)'
+          e.currentTarget.style.boxShadow = '0 0 40px rgba(255,90,0,0.15)'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.borderColor = 'rgba(255,90,0,0.35)'
+          e.currentTarget.style.boxShadow = '0 0 40px rgba(255,90,0,0.08)'
         }}
       >
         <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 700, fontStyle: 'italic', fontSize: 12, letterSpacing: 4, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', marginBottom: 6 }}>
@@ -98,7 +113,7 @@ export default function ClosingPanel() {
         <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 700, fontStyle: 'italic', textTransform: 'uppercase', fontSize: 'clamp(24px, 5vw, 34px)', color: '#ff5a00', letterSpacing: 1, textShadow: '0 0 20px rgba(255,90,0,0.5)' }}>
           vntg-hub.vercel.app
         </p>
-      </motion.div>
+      </motion.a>
 
       <motion.a
         href="https://github.com/maxifuentes2/vntg-hub"
