@@ -50,8 +50,8 @@ export default function GlassPanel({ children }) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'flex-start',
-          paddingTop: 'clamp(8px, 1.2vh, 18px)',
-          gap: 'clamp(10px, 2vh, 28px)',
+          paddingTop: 'clamp(4px, 0.6vh, 10px)',
+          gap: 'clamp(5px, 1vh, 14px)',
           flexShrink: 0,
         }}
       >
