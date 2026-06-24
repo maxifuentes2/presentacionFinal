@@ -27,6 +27,7 @@ import AdminPanel from './components/panels/AdminPanel'
 import DatabasePanel from './components/panels/DatabasePanel'
 import ApiPanel from './components/panels/ApiPanel'
 import ClosingPanel from './components/panels/ClosingPanel'
+import ClosingPanel15 from './components/panels/ClosingPanel15'
 
 const PANELS = {
   1:  HeroPanel,
@@ -43,7 +44,7 @@ const PANELS = {
   12: DatabasePanel,
   13: ApiPanel,
   14: ClosingPanel,
-  15: ClosingPanel,
+  15: ClosingPanel15,
 }
 
 export default function App() {

@@ -34,7 +34,7 @@ export default function GlassPanel({ children }) {
         zIndex: 10,
         pointerEvents: 'all',
         textAlign: 'center',
-        padding: 'clamp(16px, 4vw, 60px)',
+        padding: 'clamp(40px, 5vw, 80px)',
       }}
     >
       <motion.div

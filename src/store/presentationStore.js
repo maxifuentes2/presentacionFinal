@@ -35,7 +35,7 @@ export const CAMERA_CONFIG = [
   { position: [0,  -3,  11], target: [0, -1,  0] },  // 12  Base de Datos
   { position: [3,   1,   9], target: [1,  0,  0] },  // 13  API
   { position: [0,   0,  12], target: [0,  0,  0] },  // 14  Cierre
-  { position: [0,   0,  12], target: [0,  0,  0] },  // 15  Troll
+  { position: [0,   0,  14], target: [0,  0,  0] },  // 15  Agradecimientos
 ]
 
 export const usePresentationStore = create((set) => ({

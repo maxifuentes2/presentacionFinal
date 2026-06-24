@@ -19,7 +19,7 @@ export default function ClosingPanel() {
           marginBottom: 24,
         }}
       >
-        14 — Cierre
+        14 — Equipo
       </motion.p>
 
       <motion.p

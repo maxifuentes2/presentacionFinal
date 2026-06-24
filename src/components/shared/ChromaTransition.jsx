@@ -1,58 +1,31 @@
-import { useEffect, useRef } from 'react'
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { usePresentationStore } from '../../store/presentationStore'
 
 export default function ChromaTransition() {
-  const { isTransitioning, setTransitioning } = usePresentationStore()
-  const cancelRef = useRef(false)
-  const progress = useMotionValue(0)
-
-  const scale = useTransform(progress, [0, 0.4, 0.6, 1], [0, 2.8, 2.8, 0])
-  const rotateX = useTransform(progress, [0, 0.4, 0.6, 1], [85, 0, 0, -85])
-  const opacity = useTransform(progress, [0, 0.12, 0.88, 1], [0, 1, 1, 0])
-  const blurVal = useTransform(progress, [0, 0.3, 0.7, 1], [14, 0, 0, 14])
-  const filter = useTransform(blurVal, (v) => `blur(${v}px)`)
-
-  useEffect(() => {
-    if (!isTransitioning) return
-
-    cancelRef.current = false
-
-    async function run() {
-      await animate(progress, 1, {
-        type: 'tween',
-        duration: 1.0,
-        ease: [0.22, 1, 0.36, 1],
-      })
-      if (cancelRef.current) return
-      progress.set(0)
-      setTransitioning(false)
-    }
-
-    run()
-    return () => { cancelRef.current = true }
-  }, [isTransitioning, progress, setTransitioning])
+  const { isTransitioning } = usePresentationStore()
 
   return (
-    <motion.div
-      style={{
-        position: 'fixed',
-        left: '50%',
-        top: '50%',
-        width: '120vw',
-        height: '120vw',
-        x: '-50%',
-        y: '-50%',
-        zIndex: 15,
-        pointerEvents: 'none',
-        background: 'radial-gradient(circle at 50% 50%, #0056b3 0%, #ff5a00 40%, #171717 100%)',
-        transformStyle: 'preserve-3d',
-        willChange: 'transform, opacity, filter',
-        scale,
-        rotateX,
-        opacity,
-        filter,
-      }}
-    />
+    <AnimatePresence>
+      {isTransitioning && (
+        <motion.div
+          key="chroma"
+          initial={{ scale: 0, opacity: 0, transformOrigin: 'top left' }}
+          animate={{ scale: 2.8, opacity: 1, transformOrigin: 'top left' }}
+          exit={{ scale: 0, opacity: 0, transformOrigin: 'bottom right' }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            zIndex: 15,
+            pointerEvents: 'none',
+            background: 'linear-gradient(135deg, #ff5a00 0%, #ff8c38 30%, #0056b3 70%, #003e9b 100%)',
+            willChange: 'transform',
+          }}
+        />
+      )}
+    </AnimatePresence>
   )
 }

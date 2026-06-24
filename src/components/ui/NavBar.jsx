@@ -45,9 +45,7 @@ export default function NavBar() {
           lineHeight: 1,
         }}
         onMouseEnter={(e) => {
-          if (currentSlide > 1) {
-            e.currentTarget.style.background = 'rgba(255,90,0,0.2)'
-          }
+          if (currentSlide > 1) e.currentTarget.style.background = 'rgba(255,90,0,0.2)'
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.background = currentSlide <= 1 ? 'transparent' : 'rgba(255,90,0,0.1)'
@@ -66,6 +64,7 @@ export default function NavBar() {
           color: 'rgba(255,90,0,0.7)',
           minWidth: 44,
           textAlign: 'center',
+          userSelect: 'none',
         }}
       >
         {String(currentSlide).padStart(2, '0')}/{String(TOTAL_SLIDES).padStart(2, '0')}
@@ -90,9 +89,7 @@ export default function NavBar() {
           lineHeight: 1,
         }}
         onMouseEnter={(e) => {
-          if (currentSlide < TOTAL_SLIDES) {
-            e.currentTarget.style.background = 'rgba(0,86,179,0.2)'
-          }
+          if (currentSlide < TOTAL_SLIDES) e.currentTarget.style.background = 'rgba(0,86,179,0.2)'
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.background = currentSlide >= TOTAL_SLIDES ? 'transparent' : 'rgba(0,86,179,0.1)'
