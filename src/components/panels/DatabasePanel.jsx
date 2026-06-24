@@ -22,7 +22,7 @@ export default function DatabasePanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
@@ -47,7 +47,7 @@ export default function DatabasePanel() {
         Diseño de Base de Datos
       </h2>
 
-      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 18, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 28, color: 'rgba(161,161,170,0.65)', marginBottom: 18, lineHeight: 1.55 }}>
         Esquema relacional en MySQL con 10 tablas principales, índices
         optimizados, stored procedures para operaciones críticas y triggers
         de auditoría.
@@ -83,7 +83,7 @@ export default function DatabasePanel() {
                 fontWeight: 700,
                 fontStyle: 'italic',
                 textTransform: 'uppercase',
-                fontSize: 16,
+                fontSize: 18,
                 color: t.type === 'orange' ? '#ff5a00' : '#0056b3',
                 marginBottom: 2,
               }}
@@ -111,7 +111,7 @@ export default function DatabasePanel() {
         transition={{ delay: 1 }}
         style={{
           marginTop: 12,
-          fontSize: 16,
+          fontSize: 20,
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',

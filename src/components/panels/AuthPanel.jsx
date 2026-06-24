@@ -19,7 +19,7 @@ export default function AuthPanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
@@ -44,7 +44,7 @@ export default function AuthPanel() {
         Autenticación y Seguridad
       </h2>
 
-      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 28, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
         Registro y login con JWT y Bcryptjs para hash de contraseñas. Autenticación
         en dos pasos vía email + código, Google OAuth con flujo de redirección
         mediante id_token, y recuperación de cuentas por correo.
@@ -75,7 +75,7 @@ export default function AuthPanel() {
         style={{
           borderRadius: 12,
           width: '100%',
-          maxWidth: 720,
+          maxWidth: 520,
           aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(255,90,0,0.2)',
@@ -91,7 +91,7 @@ export default function AuthPanel() {
         transition={{ delay: 0.8 }}
         style={{
           marginTop: 32,
-          fontSize: 16,
+          fontSize: 20,
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',

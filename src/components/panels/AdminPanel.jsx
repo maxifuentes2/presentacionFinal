@@ -19,7 +19,7 @@ export default function AdminPanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
@@ -44,7 +44,7 @@ export default function AdminPanel() {
         Arquitectura y Admin
       </h2>
 
-      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 28, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
         Backend con Node.js + Express y MySQL en Railway. Frontend en Vercel, API
         en Render. Panel de administración con CRUD de productos, categorías,
         envíos y pedidos. Soporte con Gmail API Poller que lee correos entrantes
@@ -76,7 +76,7 @@ export default function AdminPanel() {
         style={{
           borderRadius: 12,
           width: '100%',
-          maxWidth: 720,
+          maxWidth: 520,
           aspectRatio: '16 / 9',
           overflow: 'hidden',
           border: '1px solid rgba(255,90,0,0.2)',
@@ -92,7 +92,7 @@ export default function AdminPanel() {
         transition={{ delay: 0.8 }}
         style={{
           marginTop: 32,
-          fontSize: 16,
+          fontSize: 20,
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',

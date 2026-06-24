@@ -12,7 +12,7 @@ export default function ClosingPanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.5)',
@@ -61,7 +61,6 @@ export default function ClosingPanel() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.6 }}
-        className="gradient-text"
         style={{
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 900,
@@ -70,6 +69,7 @@ export default function ClosingPanel() {
           fontSize: 'clamp(42px, 7vw, 72px)',
           letterSpacing: -2,
           lineHeight: 1.1,
+          color: '#f4f4f5',
           marginBottom: 20,
         }}
       >
@@ -168,7 +168,7 @@ export default function ClosingPanel() {
         }}
       >
         {['Máximo Fuentes', 'Santiago Zufia','Bautista Delluniversidad', 'Gaspar Barroso', 'Bruno Guzmán', 'Ignacio Povolo'].map((name) => (
-          <div key={name} className="chip chip-orange" style={{ fontSize: 16, padding: '11px 22px' }}>
+          <div key={name} className="chip chip-orange" style={{ fontSize: 18, padding: '12px 24px' }}>
             <span className="chip-dot chip-dot-orange" />
             {name}
           </div>

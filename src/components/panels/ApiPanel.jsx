@@ -22,11 +22,11 @@ export default function ApiPanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
-          marginBottom: 8,
+          marginBottom: 4,
         }}
       >
         13 — API REST
@@ -40,42 +40,42 @@ export default function ApiPanel() {
           textTransform: 'uppercase',
           fontSize: 'clamp(42px, 6vw, 72px)',
           color: '#f4f4f5',
-          marginBottom: 6,
+          marginBottom: 4,
           letterSpacing: -0.5,
         }}
       >
         Estructura de la API
       </h2>
 
-      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 18, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 28, color: 'rgba(161,161,170,0.65)', marginBottom: 10, lineHeight: 1.55 }}>
         API RESTful con autenticación JWT, middleware de roles, validación de
         datos y respuestas normalizadas. Documentación interactiva disponible.
       </p>
 
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'column',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
           gap: 8,
           width: '100%',
-          maxWidth: 560,
-          marginBottom: 10,
+          maxWidth: 800,
+          marginBottom: 4,
         }}
       >
         {endpoints.map((ep, i) => (
           <motion.div
             key={ep.path}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.15 + i * 0.06 }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12 + i * 0.04 }}
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 14,
+              gap: 12,
               background: 'rgba(255,255,255,0.02)',
               border: '1px solid rgba(255,255,255,0.04)',
-              borderRadius: 8,
-              padding: '12px 20px',
+              borderRadius: 6,
+              padding: '10px 16px',
             }}
           >
             <span
@@ -94,6 +94,7 @@ export default function ApiPanel() {
                 color: ep.method === 'GET' ? '#0056b3' : '#ff5a00',
                 minWidth: 42,
                 textAlign: 'center',
+                flexShrink: 0,
               }}
             >
               {ep.method}
@@ -106,19 +107,12 @@ export default function ApiPanel() {
                 textTransform: 'uppercase',
                 fontSize: 15,
                 color: 'rgba(244,244,245,0.8)',
-                flex: 1,
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
               }}
             >
               {ep.path}
-            </span>
-            <span
-              style={{
-                fontSize: 11,
-                color: 'rgba(161,161,170,0.55)',
-                display: 'none',
-              }}
-            >
-              {ep.desc}
             </span>
           </motion.div>
         ))}
@@ -129,8 +123,8 @@ export default function ApiPanel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9 }}
         style={{
-          marginTop: 14,
-          fontSize: 16,
+          marginTop: 6,
+          fontSize: 20,
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',

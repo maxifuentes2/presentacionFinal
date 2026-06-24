@@ -36,7 +36,7 @@ export default function AutoFit({ children, style }) {
         width: '100%',
         height: '100%',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
         overflow: 'hidden',
         ...style,

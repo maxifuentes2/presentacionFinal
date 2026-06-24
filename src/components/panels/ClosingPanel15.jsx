@@ -12,7 +12,7 @@ export default function ClosingPanel15() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.5)',
@@ -26,7 +26,6 @@ export default function ClosingPanel15() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="gradient-text"
         style={{
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 900,
@@ -35,6 +34,7 @@ export default function ClosingPanel15() {
           fontSize: 'clamp(56px, 10vw, 100px)',
           letterSpacing: -2,
           lineHeight: 1.1,
+          color: '#f4f4f5',
           marginBottom: 16,
         }}
       >

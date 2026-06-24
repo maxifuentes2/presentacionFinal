@@ -27,11 +27,11 @@ export default function ArchitecturePanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',
-          fontSize: 16,
+          fontSize: 20,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.6)',
-          marginBottom: 8,
+          marginBottom: 4,
         }}
       >
         03 — Arquitectura del Sistema
@@ -45,14 +45,14 @@ export default function ArchitecturePanel() {
           textTransform: 'uppercase',
           fontSize: 'clamp(42px, 6vw, 72px)',
           color: '#f4f4f5',
-          marginBottom: 6,
+          marginBottom: 4,
           letterSpacing: -0.5,
         }}
       >
         Arquitectura del Sistema
       </h2>
 
-      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 22, color: 'rgba(161,161,170,0.65)', marginBottom: 22, lineHeight: 1.55 }}>
+      <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 28, color: 'rgba(161,161,170,0.65)', marginBottom: 12, lineHeight: 1.55 }}>
         Aplicación SPA moderna con frontend en React y Three.js, backend RESTful
         en Node.js + Express, y base de datos MySQL relacional en la nube.
       </p>
@@ -60,31 +60,35 @@ export default function ArchitecturePanel() {
       <div
         style={{
           display: 'flex',
-          flexDirection: 'column',
-          gap: 16,
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: 14,
           width: '100%',
-          maxWidth: 560,
-          marginBottom: 10,
+          maxWidth: 960,
+          marginBottom: 6,
         }}
       >
         {layers.map((layer, i) => (
           <motion.div
             key={layer.title}
-            initial={{ opacity: 0, x: layer.color === 'orange' ? -20 : 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 + i * 0.15, duration: 0.5 }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 + i * 0.12, duration: 0.4 }}
             style={{
+              flex: 1,
+              minWidth: 260,
               background: `rgba(255,90,0,${0.04 + i * 0.02})`,
               border: `1px solid ${layer.color === 'orange' ? 'rgba(255,90,0,0.2)' : 'rgba(0,86,179,0.25)'}`,
-              borderRadius: 14,
-              padding: '22px 28px',
+              borderRadius: 12,
+              padding: '16px 24px',
             }}
           >
             <div
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 14,
+                gap: 10,
                 marginBottom: 8,
               }}
             >
@@ -112,13 +116,12 @@ export default function ArchitecturePanel() {
                 {layer.title}
               </span>
             </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8 }}>
               {layer.items.map((item) => (
                 <span
                   key={item}
                   className={`chip chip-${layer.color}`}
-                  style={{ fontSize: 15 }}
-                >
+                  style={{ fontSize: 15 }}>
                   {item}
                 </span>
               ))}
@@ -132,8 +135,8 @@ export default function ArchitecturePanel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9 }}
         style={{
-          marginTop: 14,
-          fontSize: 16,
+          marginTop: 6,
+          fontSize: 20,
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 700,
           fontStyle: 'italic',

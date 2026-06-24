@@ -14,7 +14,7 @@ export default function HeroPanel() {
           fontFamily: "'Barlow', sans-serif",
           fontWeight: 900,
           fontStyle: 'italic',
-          fontSize: 14,
+          fontSize: 18,
           letterSpacing: 6,
           textTransform: 'uppercase',
           color: 'rgba(255,90,0,0.5)',

@@ -34,7 +34,7 @@ export default function GlassPanel({ children }) {
         zIndex: 10,
         pointerEvents: 'all',
         textAlign: 'center',
-        padding: 'clamp(40px, 5vw, 80px)',
+        padding: 'clamp(40px, 3.5vw, 70px) clamp(40px, 5vw, 80px) clamp(30px, 3vw, 50px) clamp(40px, 5vw, 80px)',
       }}
     >
       <motion.div
@@ -44,12 +44,15 @@ export default function GlassPanel({ children }) {
         exit="exit"
         className="panel-container"
         style={{
-          width: '100%',
-          maxWidth: 1200,
+          width: 1200,
+          minHeight: 'clamp(520px, 66vh, 720px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 'clamp(4px, 1.2vh, 16px)',
+          justifyContent: 'flex-start',
+          paddingTop: 'clamp(8px, 1.2vh, 18px)',
+          gap: 'clamp(10px, 2vh, 28px)',
+          flexShrink: 0,
         }}
       >
         {children}
