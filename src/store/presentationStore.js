@@ -3,21 +3,21 @@ import { create } from 'zustand'
 export const TOTAL_SLIDES = 15
 
 export const SLIDE_AUDIO = {
-  1:  '/audio/1.mp3',
-  2:  '/audio/2.mp3',
-  3:  '/audio/3.mp3',
-  4:  '/audio/4.mp3',
-  5:  '/audio/5.mp3',
-  6:  '/audio/6.mp3',
-  7:  '/audio/7.mp3',
-  8:  '/audio/8.mp3',
-  9:  '/audio/9.mp3',
-  10: '/audio/10.mp3',
-  11: '/audio/11.mp3',
-  12: '/audio/12.mp3',
-  13: '/audio/13.mp3',
-  14: '/audio/14.mp3',
-  15: '/audio/15.mp3',
+  1:  '/audio/1.mpeg',
+  2:  '/audio/2.mpeg',
+  3:  '/audio/3.mpeg',
+  4:  '/audio/4.mpeg',
+  5:  '/audio/5.mpeg',
+  6:  '/audio/6.mpeg',
+  7:  '/audio/7.mpeg',
+  8:  '/audio/8.mpeg',
+  9:  '/audio/9.mpeg',
+  10: '/audio/10.mpeg',
+  11: '/audio/11.mpeg',
+  12: '/audio/12.mpeg',
+  13: '/audio/13.mpeg',
+  14: '/audio/14.mpeg',
+  15: '/audio/15.mpeg', // Espacio para agregar el audio de la diapositiva 15
 }
 
 export const CAMERA_CONFIG = [
