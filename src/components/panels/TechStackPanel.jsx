@@ -5,7 +5,7 @@ const categories = [
   {
     label: 'Frontend',
     color: 'orange',
-    items: ['React 18', 'Vite 5', 'Tailwind CSS 4', 'Framer Motion', 'GSAP', 'Three.js', 'React Three Fiber', 'Drei', 'Zustand'],
+    items: ['React 18', 'Vite 5', 'Tailwind CSS 4', 'Framer Motion', 'GSAP', 'Zustand'],
   },
   {
     label: 'Backend & DB',

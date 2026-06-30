@@ -4,7 +4,7 @@ import GlassPanel from '../shared/GlassPanel'
 const layers = [
   {
     title: 'Frontend',
-    items: ['React 18 + Vite', 'Three.js / R3F', 'Framer Motion + GSAP', 'Tailwind CSS 4', 'Zustand'],
+    items: ['React 18 + Vite', 'Framer Motion + GSAP', 'Tailwind CSS 4', 'Zustand'],
     color: 'orange',
   },
   {
@@ -53,7 +53,7 @@ export default function ArchitecturePanel() {
       </h2>
 
       <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontStyle: 'italic', fontSize: 28, color: 'rgba(161,161,170,0.65)', marginBottom: 12, lineHeight: 1.55 }}>
-        Aplicación SPA moderna con frontend en React y Three.js, backend RESTful
+        Aplicación SPA moderna con frontend en React, backend RESTful
         en Node.js + Express, y base de datos MySQL relacional en la nube.
       </p>
 
